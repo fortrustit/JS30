@@ -53,6 +53,19 @@
       transform: translateY(-3px); /* account for the height of the clock hands */
     }
 
+    .clock-face:after {
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      content: '';
+      background-color: #a8c5d1;
+      border-radius: 100%;
+      box-shadow: 0 0 0 2px rgba(0,0,0,0.1), 0 0 10px rgba(0,0,0,0.2);
+    }    
+
     .hand {
       width:50%;
       height:6px;
