@@ -95,6 +95,10 @@
       secondHand.style.transform = `rotate(${secondsDeg}deg)`;
       minHand.style.transform = `rotate(${minutesDeg}deg)`;
       hourHand.style.transform = `rotate(${hoursDeg}deg)`;
+
+      if (secondsDeg === 90 || minutesDeg === 90 || hoursDeg === 90) {
+        secondHand.style.transition = 'all 0s';
+      }
     }
     setInterval(setDate, 1000);
   </script>
