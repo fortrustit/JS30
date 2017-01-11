@@ -1,2 +1,1 @@
-# clockJS
-#vanillaJS 30
+# vanillaJS 30
