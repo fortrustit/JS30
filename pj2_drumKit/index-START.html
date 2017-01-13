@@ -67,7 +67,10 @@
     sound.currentTime = 0;
     sound.play();
   };
-  const rmClass = e => e.target.classList.remove('playing');
+  const rmClass = (e) => {
+    if(e.propertyName !== 'transform') return;
+    e.target.classList.remove('playing');
+  };
   const keys = document.querySelectorAll('.key');
   keys.forEach(keys => keys.addEventListener('transitionend', rmClass, false));
   window.addEventListener('keydown', addClass , false );
